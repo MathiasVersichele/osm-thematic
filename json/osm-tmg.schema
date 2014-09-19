@@ -1,0 +1,22 @@
+{
+	"id": "osm-tmg-schema",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "json schema for the osm-tmg (OpenStreetMap Thematic Map Generator) QGIS plugin",
+    "type": "object",
+    "required": [ "name" ],
+    "properties": {
+    	"name": {
+    		"description": "The name of the map",
+            "type": "string"
+    	}
+    },
+    "bbox": {
+    	"type": "object",
+            "properties": {
+    			"west": {"type": "number"},
+    			"south": {"type": "number"},
+    			"north": {"type": "number"},
+    			"east": {"type": "number"}
+        	}
+    }
+}
