@@ -1,0 +1,31 @@
+{
+	"id": "osm-tmg-schema",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "json schema for the osm-thematic QGIS plugin",
+    "type": "object",
+    "required": [ "name", "bbox" ],
+    "properties": {
+    	"name": {
+    		"description": "name of the map",
+            "type": "string"
+    	},
+    	"context" : {
+    		"description": "extra context to download",
+            "type": "array",
+            "items": {
+    			"type": "string"
+  			}
+    	}
+    },
+    "bbox": {
+    	"description": "bounding box of the extract (lat/long)",
+    	"type": "object",
+            "properties": {
+    			"west": {"type": "number"},
+    			"south": {"type": "number"},
+    			"east": {"type": "number"},
+    			"north": {"type": "number"}
+        	},
+        "required": [ "west", "south", "east", "north" ]
+    }
+}
